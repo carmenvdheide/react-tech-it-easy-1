@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.salesOverview {
+    border: 1px red solid;
+}
+
+.allTiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.numberOfProductsTile {
+    border: 1px dashed pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    flex-basis: 250px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.numberOfProductsDescription {
+    text-align: center;
+}
+
+.numberSold {
+    border: 2px solid green;
+    color: green;
+}
+
+.numberPurchased {
+    border: 2px solid blue;
+    color: blue;
+}
+
+.numberToBeSold {
+    border: 2px solid red;
+    color: red;
+}
+
+
+
