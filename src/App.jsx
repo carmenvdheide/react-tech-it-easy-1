@@ -2,10 +2,24 @@ import './App.css';
 import soldTvs from "./helpers/numberOfSoldTvs.js";
 import purchasedTvs from "./helpers/numberOfPurchasedtvs.js";
 import toBeSoldTvs from "./helpers/numberTvsToBeSold.js";
+import stringNameBestSellingTv from "./helpers/stringNameBestSellingTv.js";
+import {bestSellingTv} from "./constants/inventory.js";
+import formatBestSellingPrice from "./helpers/priceTv.js";
+import formatBestSellingScreenSize from "./helpers/screenSize.js"
 
 function App() {
+    function mostSoldFirst(){
+        console.log("Meest verkocht eerst")
+    }
+    function mostCheapFirst(){
+        console.log("Goedkoopste eerst")
+    }
+    function bestForSportsFirst(){
+        console.log("Meest geschikt voor sport eerst")
+    }
   return (
       <>
+          <div className="outer-container">
           <h1>Tech it easy dashboard</h1>
           <section className="salesOverview">
               <h2>Verkoopoverzicht</h2>
@@ -24,9 +38,40 @@ function App() {
               </article>
               </div>
             </section>
+
+          <section className="bestSellingTv">
+              <span className="imgBestSellingTv">
+                  <img src="https://image.coolblue.nl/max/500x500/products/1786196" alt="samsung tv"/>
+              </span>
+              <article className="informationBestSellingTv">
+                  <p className="nameBestSellingTv">{stringNameBestSellingTv(bestSellingTv.brand,bestSellingTv.type,bestSellingTv.name)}</p>
+                  <p className="priceBestSellingTv">{formatBestSellingPrice(bestSellingTv.price)}</p>
+                  <p className="sizeBestSellingTv">{formatBestSellingScreenSize(bestSellingTv.availableSizes)}</p>
+                  <div className="icons">
+                      <img src="src/assets/check.png" alt="check"/>
+                      <p>wifi</p>
+                      <img src="src/assets/minus.png" alt="not-icon"/>
+                      <p>Speech</p>
+                      <img src="src/assets/check.png" alt="check"/>
+                      <p>hdr</p>
+                      <img src="src/assets/check.png" alt="check"/>
+                      <p>bluetooth</p>
+                      <img src="src/assets/minus.png" alt="not-icon"/>
+                      <p>ambilight</p>
+                  </div>
+              </article>
+          </section>
+          <div className="buttons">
+              <button type="button" onClick={mostSoldFirst}>Meest verkocht eerst</button>
+              <button type="button" onClick={mostCheapFirst}>Goedkoopste eerst</button>
+              <button type="button" onClick={bestForSportsFirst}>Meest geschikt vor sport eerst</button>
+          </div>
+
+          </div>
       </>
   )
 }
+
 
 
 

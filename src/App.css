@@ -4,18 +4,24 @@
     padding: 0;
 }
 
+.outer-container {
+    /*border: 3px dotted purple;*/
+    margin: 0 250px;
+}
+
+/************ SALES OVERVIEW*/
 .salesOverview {
-    border: 1px red solid;
+    /*border: 1px red solid;*/
 }
 
 .allTiles {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .numberOfProductsTile {
-    border: 1px dashed pink;
+    /*border: 1px dashed pink;*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -45,5 +51,53 @@
     color: red;
 }
 
+/************ BEST SELLING TV*/
 
+.bestSellingTv {
+    border: 2px dotted grey;
+    border-radius: 30px;
+    padding: 35px;
+}
+
+.bestSellingTv {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.imgBestSellingTv {
+    /*border: 2px dashed green;*/
+    flex-basis: 350px;
+    flex-grow: 0;
+}
+
+.imgBestSellingTv img {
+    width: 100%;
+}
+
+.informationBestSellingTv {
+    /*border: dashed 2px green;*/
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around ;
+}
+
+.nameBestSellingTv {
+    font-size: 20px;
+}
+
+.priceBestSellingTv {
+    font-size: 30px;
+}
+.icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icons img {
+    width: 15px;
+    height: 15px;
+}
 
