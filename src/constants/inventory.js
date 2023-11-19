@@ -329,3 +329,106 @@ export let inventory = [
 ];
 
 
+//////////////////////////////// OPDRACHT 1A
+console.log("1A")
+
+const tvTypes = []
+
+for (let i = 0; i < inventory.length; i++) {
+    tvTypes.push(inventory[i].type)
+}
+console.log(tvTypes)
+
+
+//////////////////////////////// OPDRACHT 1B
+console.log("1B")
+
+let soldOutTvs = []
+
+for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].originalStock === inventory[i].sold) {
+        soldOutTvs.push(inventory[i])
+    }
+}
+console.log(soldOutTvs)
+
+
+//////////////////////////////// OPDRACHT 1C
+console.log("1C")
+
+
+const typeNH3216SMART = []
+
+for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].type === 'NH3216SMART') {
+        typeNH3216SMART.push(inventory[i])
+    }
+}
+
+console.log(typeNH3216SMART)
+
+//////////////////////////////// OPDRACHT 1D
+console.log("1D")
+
+let eligibleForSports = []
+
+for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].refreshRate >= 100) {
+        eligibleForSports.push(`naam: ${inventory[i].brand} ${inventory[i].name}, suitable: true`)
+    } else {
+        eligibleForSports.push(`naam: ${inventory[i].brand} ${inventory[i].name}, suitable: false`)
+    }
+}
+
+console.log(eligibleForSports)
+
+//////////////////////////////// OPDRACHT 1E
+console.log("1E")
+
+let bigScreens = []
+
+
+for (let i = 0; i < inventory.length; i++) {
+        const bigScreen = inventory[i].availableSizes.filter((size) => {
+            if (size >= 65) {
+                bigScreens.push(inventory[i])
+            }
+        })
+}
+
+console.log(bigScreens)
+
+
+//////////////////////////////// OPDRACHT 1F
+console.log("1F")
+
+let ambiLightTvs = []
+
+for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].options[4].applicable === true) {
+        ambiLightTvs.push(inventory[i])
+    }
+}
+console.log(ambiLightTvs)
+
+
+//////////////////////////////// OPDRACHT 2A
+console.log("2A")
+
+let tvBrands = []
+
+for (let i = 0; i < inventory.length; i++) {
+    tvBrands.push(inventory[i].brand)
+}
+
+console.log(tvBrands)
+
+
+
+
+
+
+
+
+
+

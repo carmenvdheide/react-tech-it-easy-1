@@ -5,14 +5,18 @@
 }
 
 .outer-container {
-    /*border: 3px dotted purple;*/
-    margin: 0 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-container {
+    max-width: 55rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 /************ SALES OVERVIEW*/
-.salesOverview {
-    /*border: 1px red solid;*/
-}
 
 .allTiles {
     display: flex;
@@ -34,40 +38,44 @@
 
 .numberOfProductsDescription {
     text-align: center;
+    font-size: 18px;
+}
+
+.numberOfProducts {
+    font-size: 20px;
 }
 
 .numberSold {
-    border: 2px solid green;
-    color: green;
+    border: 2px solid rgba(141, 171, 127, 1);
+    color: rgba(141, 171, 127, 1);
+    background-color: rgba(141, 171, 127, 0.1);
 }
 
 .numberPurchased {
-    border: 2px solid blue;
-    color: blue;
+    border: 2px solid rgba(82, 153, 211, 1);
+    color: rgba(82, 153, 211, 1);
+    background-color: rgba(82, 153, 211, 0.1);
 }
 
 .numberToBeSold {
-    border: 2px solid red;
-    color: red;
+    border: 2px solid rgba(144, 50, 61, 1);
+    color: rgba(144, 50, 61, 1);
+    background-color: rgba(144, 50, 61, 0.1);
 }
 
-/************ BEST SELLING TV*/
+/***************** BEST SELLING TV*/
 
 .bestSellingTv {
     border: 2px dotted grey;
     border-radius: 30px;
     padding: 35px;
-}
-
-.bestSellingTv {
     display: flex;
     justify-content: space-between;
     gap: 50px;
 }
 
 .imgBestSellingTv {
-    /*border: 2px dashed green;*/
-    flex-basis: 350px;
+    flex-basis: 30%;
     flex-grow: 0;
 }
 
@@ -76,7 +84,6 @@
 }
 
 .informationBestSellingTv {
-    /*border: dashed 2px green;*/
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -90,6 +97,8 @@
 .priceBestSellingTv {
     font-size: 30px;
 }
+
+
 .icons {
     display: flex;
     gap: 10px;
@@ -100,4 +109,81 @@
     width: 15px;
     height: 15px;
 }
+
+.buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+button {
+    padding: 0.2rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+/************************ ALL TVS*/
+
+.tv-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+ }
+
+.all-tv-container {
+    border: 2px dotted grey;
+    border-radius: 30px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+.img-tv {
+    flex-basis: 30%;
+    flex-grow: 0;
+}
+
+.img-tv img {
+    width: 100%;
+}
+
+.information-tv {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around ;
+}
+
+.name-tv {
+    font-size: 20px;
+}
+
+.price-tv {
+    font-size: 30px;
+}
+
+.option-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.option-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.option-name {
+    list-style-type: none;
+}
+
+
+
 
